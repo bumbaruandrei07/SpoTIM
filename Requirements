@@ -1,6 +1,6 @@
 Design and implement an application in which we can:
 
-- Create SportTeams (football teams, basketball teams or hockey teams)
+- Create SportTeams (football main, basketball main or hockey main)
 - Create SportClubs
 - Create Humans which can be one or more Sporters (footballer, basketballer or hockeyer)
     - Different sporters have different behavior (KickBall, Tackle, ThrowBall, Dunk, HitPuck, BodySlam)
@@ -12,7 +12,7 @@ State:
     - name (String)
     - foundingYear
 - SportTeam state
-    - multiple members (Sporter) (fixed number)
+    - multiple members (Sporter)
     - sportclub (SportClub)
     - name (String)
     - description (String)
@@ -20,11 +20,11 @@ State:
     - name (String)
     - birthdate
 
-Write a service(class) in which you can create all kinds of sport-clubs, -teams and -humans. The service should respect a concrete contract.
+Write a service(class) in which you can create all kinds of sport-clubs, -main and -humans. The service should respect a concrete contract.
 Call this service in an executable class.
 
 Be creative and try to create an as good as possible application for the registration of
-humans who want to become sporters and want to join sport-teams and -clubs.
+humans who want to become sporters and want to join sport-main and -clubs.
 
 Some food for thought:
 - Should a footballer be able to join a basketball team?  -> SportTeam class is generic
