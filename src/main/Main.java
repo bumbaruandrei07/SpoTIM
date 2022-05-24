@@ -32,6 +32,14 @@ public class Main {
         hockeyerSportTeam.addSporter(hockeyer2);
         hockeyClub.addInClub(hockeyerSportTeam);
         System.out.println(hockeyerSportTeam);
+        System.out.println("==================");
+        SportClub footbalClub = new SportClub("Football Club", 2011);
+        SportTeam<Footballer> footballerSportTeam = new SportTeam("Barcelona", "Best football team");
+        footballerSportTeam.addSporter(footballer1);
+        System.out.println(footballer1);
+        footbalClub.addInClub(footballerSportTeam);
+        System.out.println(footbalClub);
+        System.out.println("==================");
 
 
     }
