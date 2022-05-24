@@ -6,17 +6,15 @@ import java.util.ArrayList;
 
 public class SportTeam<E extends Human> {
 
-    public SportClub sportClub;
     private String name;
     private String description;
+    private ArrayList<E> sporters = new ArrayList<>();
 
-    public SportTeam(int capacity, String clubName, int foundingYear, String name, String description) {
+    public SportTeam(String name, String description) {
         this.name = name;
         this.description = description;
-        sportClub = new SportClub(capacity, clubName, foundingYear);
     }
 
-    private ArrayList<E> sporters = new ArrayList<>();
 
     public boolean addSporter(E sporter) {
         if (sporters.contains(sporter)) {
@@ -30,10 +28,9 @@ public class SportTeam<E extends Human> {
 
     @Override
     public String toString() {
-        String res = "";
-        for (E result : sporters) {
-            res += result + "\n";
-        }
-        return res;
+        return
+                "Team name: " + name + "\n" +
+                "Description of the team: " + description + "\n" +
+                "Sporters : " + sporters;
     }
 }

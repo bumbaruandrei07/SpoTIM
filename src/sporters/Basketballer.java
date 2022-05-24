@@ -24,4 +24,9 @@ public class Basketballer extends Human implements IDunk, ITackle, IBodySlam {
     public void bodySlam() {
         System.out.println("This basketballer can perform a body slam");
     }
+
+    @Override
+    public String toString() {
+        return "Name: " + getName() + "\n" + "Birthdate: " + getBirthDate();
+    }
 }

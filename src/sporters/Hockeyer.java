@@ -19,4 +19,9 @@ public class Hockeyer extends Human implements IHitPuck, ITackle {
     public void tackle() {
         System.out.println("This hockeyer can perform a very good tackle");
     }
+
+    @Override
+    public String toString() {
+        return "Name: " + getName() + "\n" + "Birthdate: " + getBirthDate();
+    }
 }

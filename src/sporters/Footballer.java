@@ -26,4 +26,9 @@ public class Footballer extends Human implements ITackle, IKickBall, IThrowBall 
     public void throwBall() {
         System.out.println("This footballer can throw very well");
     }
+
+    @Override
+    public String toString() {
+        return "Name: " + getName() + "\n" + "Birthdate: " + getBirthDate();
+    }
 }

@@ -1,30 +1,28 @@
 package clubs;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+
 
 public class SportClub {
 
-    SportTeam[] sportTeams;
+    ArrayList<SportTeam> sportTeams;
     private String name;
     private int foundingYear;
 
-    public SportClub(int capacity, String name, int foundingYear) {
+    public SportClub(String name, int foundingYear) {
         this.name = name;
         this.foundingYear = foundingYear;
-        if (capacity > 0) {
-            sportTeams = new SportTeam[capacity];
-        }
-
+        sportTeams = new ArrayList<>();
     }
 
-    public void addTeam() {
-        for (int i = 0; i < sportTeams.length; i++) {
-           //
+    public void addInClub(SportTeam sportTeam) {
+        if (!sportTeams.contains(sportTeam)) {
+            sportTeams.add(sportTeam);
         }
     }
 
     @Override
     public String toString() {
-        return "Team: " + Arrays.toString(sportTeams) + "\n" + "Team name: " + name + "\n" + "Founding year: " + foundingYear;
+        return "Teams in the club: " + sportTeams + "\n" + "Club name: " + name + "\n" + "Founding year: " + foundingYear;
     }
 }
