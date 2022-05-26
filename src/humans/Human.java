@@ -37,7 +37,6 @@ public abstract class Human {
         } else if (!name.equals(other.name)) {
             return false;
         }
-
         return true;
     }
 }

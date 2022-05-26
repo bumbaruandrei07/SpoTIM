@@ -15,7 +15,6 @@ public class SportTeam<E extends Human> {
         this.description = description;
     }
 
-
     public boolean addSporter(E sporter) {
         if (sporters.contains(sporter)) {
             System.out.println("Error: Sporter " + sporter.getName() + " is already in aquarium.");
