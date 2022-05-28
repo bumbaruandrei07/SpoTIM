@@ -6,9 +6,17 @@ import sporters.Basketballer;
 import sporters.Footballer;
 import sporters.Hockeyer;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+
+        Scanner sc = new Scanner(System.in);
 
         Footballer footballer1 = new Footballer("Neymar", 1970);
         Basketballer basketballer1 = new Basketballer("LeBron James", 1985);
@@ -40,6 +48,26 @@ public class Main {
         footbalClub.addInClub(footballerSportTeam);
         System.out.println(footbalClub);
         System.out.println("==================");
+
+
+        List<SportClub> clubs = new ArrayList<>();
+        clubs.add(basketClub);
+        clubs.add(footbalClub);
+        clubs.add(hockeyClub);
+
+
+        clubs = SportClub.readFromBinaryFile();
+
+        System.out.println("Doriti sa resetati aplicatia? Y/N");
+        String option = sc.next();
+        if (option.equalsIgnoreCase("Y")) {
+            clubs.clear();
+            System.out.println("Datele au fost sterse cu succes!");
+        }
+
+
+        SportClub.writeToBinaryFile(clubs);
+
 
     }
 }

@@ -1,6 +1,8 @@
 package humans;
 
-public abstract class Human {
+import java.io.Serializable;
+
+public abstract class Human implements Serializable {
 
     private String name;
     private int birthDate;

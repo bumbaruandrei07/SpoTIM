@@ -2,9 +2,10 @@ package clubs;
 
 import humans.Human;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class SportTeam<E extends Human> {
+public class SportTeam<E extends Human> implements Serializable {
 
     private String name;
     private String description;
